@@ -9,21 +9,18 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/main.ts"),
+      entry: resolve(__dirname, "src/index.ts"),
       name: "Vue3PersianDateTimePicker",
-      fileName: "vue3-persian-date-time-picker",
+      fileName: "vue3-persian-date-time-picker"
     },
     rollupOptions: {
       external: ["vue"],
       output: {
         globals: {
-          vue: "Vue",
-        },
-      },
-    },
-    minify: true,
-    sourcemap: true,
-    target: 'modules'
+          vue: "Vue"
+        }
+      }
+    }
   },
   resolve: {
     alias: {

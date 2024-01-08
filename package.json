@@ -1,15 +1,16 @@
 {
-  "name": "vue3-persian-datetime-picker",
+  "name": "@pseudolime/vue3-persian-date-picker",
   "description": "A vue plugin to select jalali date and time",
-  "version": "1.2.2",
-  "author": "Mohammad Talkhabi",
+  "version": "1.2.3",
+  "publishConfig": {
+    "access": "public",
+    "tag": "vue3 persian date time picker, persian date time picker"
+  },
+  "author": "Amir hemmati",
   "license": "MIT",
-  "main": "dist/vue3-persian-datetime-picker.mjs",
-  "module": "dist/vue3-persian-date-time-picker.mjs",
-  "exports": [
-    "./dist/vue3-persian-datetime-picker.mjs",
-    "./dist/style.css"
-  ],
+  "main": "dist/vue3-persian-date-time-picker.umd.cjs",
+  "module": "dist/vue3-persian-date-time-picker.js",
+  "type": "module",
   "keywords": [
     "vuejs",
     "persian",
@@ -25,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/talkhabi/vue3-persian-datetime-picker"
+    "url": "https://github.com/ngtive/vue3-persian-datetime-picker"
   },
   "files": [
     "src",
@@ -34,18 +35,25 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "build": "vite build",
     "types": "vue-tsc ",
     "preview": "vite preview"
   },
   "dependencies": {
+    "moment": "^2.30.1",
     "moment-jalaali": "^0.9.4",
     "vue": "^3.4.5"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@vitejs/plugin-vue": "^5.0.2",
     "node-sass": "^9.0.0",
     "prettier": "^1.19.1",
+    "rollup": "^4.9.4",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.69.7",
     "typescript": "^5.2.2",
     "vite": "^5.0.11",

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Vue3PersianDatetimePicker from '@/picker/Vue3PersianDatetimePicker'
+import Vue3PersianDatetimePicker from '@/picker/Vue3PersianDatetimePicker.vue'
 export default {
   name: 'Home',
   components: {
