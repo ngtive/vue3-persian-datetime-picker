@@ -24,7 +24,7 @@ export default {
     return {
       date: '',
       time: '',
-      pageTitle: process.env.VUE_APP_TITLE
+      pageTitle: import.meta.env.VITE_VUE_APP_TITLE
     }
   }
 }

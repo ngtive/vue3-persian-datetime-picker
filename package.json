@@ -4,7 +4,12 @@
   "version": "1.2.2",
   "author": "Mohammad Talkhabi",
   "license": "MIT",
-  "main": "dist/vue3-persian-datetime-picker.common.js",
+  "main": "dist/vue3-persian-datetime-picker.mjs",
+  "module": "dist/vue3-persian-date-time-picker.mjs",
+  "exports": [
+    "./dist/vue3-persian-datetime-picker.mjs",
+    "./dist/style.css"
+  ],
   "keywords": [
     "vuejs",
     "persian",
@@ -28,33 +33,24 @@
     "index.d.ts"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "buildAll": "npm run export-common & npm run export-umd",
-    "export-common": "vue-cli-service build --target lib --name Vue3PersianDatetimePicker --filename vue3-persian-datetime-picker src/picker/Vue3PersianDatetimePicker.vue --formats commonjs --no-clean",
-    "export-umd": "vue-cli-service build --target lib --name Vue3PersianDatetimePicker --filename vue3-persian-datetime-picker src/picker/Vue3PersianDatetimePicker.vue --formats umd,umd-min --no-clean"
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "types": "vue-tsc ",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "moment-jalaali": "^0.9.4"
+    "moment-jalaali": "^0.9.4",
+    "vue": "^3.4.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.11",
-    "@vue/cli-plugin-eslint": "^4.5.11",
-    "@vue/cli-plugin-router": "^4.5.11",
-    "@vue/cli-service": "^4.5.11",
-    "@vue/compiler-sfc": "^3.0.5",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "core-js": "^3.8.3",
-    "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.5.0",
-    "node-sass": "^4.14.1",
+    "@vitejs/plugin-vue": "^5.0.2",
+    "node-sass": "^9.0.0",
     "prettier": "^1.19.1",
-    "sass-loader": "^8.0.2",
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
+    "sass": "^1.69.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.11",
+    "vue-router": "^4.2.5",
+    "vue-tsc": "^1.8.27"
   },
   "eslintConfig": {
     "root": true,

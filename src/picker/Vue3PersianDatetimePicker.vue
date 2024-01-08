@@ -445,18 +445,18 @@
 </template>
 
 <script>
-import './assets/scss/style.scss'
-import Arrow from './components/Arrow'
-import TimeIcon from './components/TimeIcon'
-import CalendarIcon from './components/CalendarIcon'
-import LocaleChange from './components/LocaleChange'
-import TimeSection from './components/time/TimeSection'
-import SimpleMode from './components/simple/SimpleMode'
+import '@/picker/assets/scss/style.scss'
+import Arrow from '@/picker/components/Arrow.vue'
+import TimeIcon from '@/picker/components/TimeIcon.vue'
+import CalendarIcon from '@/picker/components/CalendarIcon.vue'
+import LocaleChange from '@/picker/components/LocaleChange.vue'
+import TimeSection from '@/picker/components/time/TimeSection.vue'
+import SimpleMode from '@/picker/components/simple/SimpleMode.vue'
 
-import CoreModule from './modules/core'
-import { popupRouteChanger } from './modules/mixins'
-import { cloneDates, extend, isSameDay } from './modules/utils'
-import { addLiveEvent } from './modules/utils'
+import CoreModule from '@/picker/modules/core'
+import { popupRouteChanger } from '@/picker/modules/mixins'
+import { cloneDates, extend, isSameDay } from '@/picker/modules/utils'
+import { addLiveEvent } from '@/picker/modules/utils'
 
 export default {
   name: 'Vue3PersianDatetimePicker',

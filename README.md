@@ -69,8 +69,8 @@ export default defineConfig({
 
 
 ### Usage
-```javascript
-// main.js
+```ts
+// main.ts
 
 import { createApp } from 'vue'
 import Vue3PersianDatetimePicker from 'vue3-persian-datetime-picker'
@@ -99,8 +99,8 @@ Or in component
 
 
 ### You can also set default values: 
-```javascript
-// main.js
+```ts
+// main.ts
 
 import Vue3PersianDatetimePicker from 'vue3-persian-datetime-picker'
 const app = createApp({})
